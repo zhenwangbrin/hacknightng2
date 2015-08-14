@@ -26,7 +26,7 @@ export default class RepoList {
     players = [];
 
     init() {
-        this.players = [{position:1},{position:2},{position:-1},{position:-1}];
+        this.players = [{position:1, character:{}},{position:2, character:{}},{position:-1, character:{}},{position:-1, character:{}}];
         
          this.characterCards = [{ name: "Superman", description: "1"},
                         { name: "Gymnastic", description: "2"},
@@ -93,5 +93,15 @@ export default class RepoList {
     }
     constructor() {
         this.init();
+    }
+    generateCharacter() {
+        var returnChar = this.characterCards[0];
+        this.characterCards = this.characterCards.slice(1, this.characterCards.length-1);
+        return returnChar;
+    }
+    generateAbility() {
+        var returnAbility = this.abilityCards[0];
+        this.abilityCards = this.abilityCards.slice(1, this.abilityCards.length-1);
+        return returnAbility;
     }
 }
