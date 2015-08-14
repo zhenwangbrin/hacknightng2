@@ -38,17 +38,17 @@ export default class RepoList {
     init() {
         this.players = [{position:1, character:{}},{position:2, character:{}},{position:-1, character:{}},{position:-1, character:{}}];
         
-         this.characterCards = [{ name: "Superman", description: "1"},
-                        { name: "Gymnastic", description: "2"},
-                        { name: "Electric Eel", description: "3"},
-                        { name: "Physic", description: "4"},
+         this.characterCards = [{ name: "Aquaman", description: "1"},
+                        { name: "Barbie", description: "2"},
+                        { name: "Cartman", description: "3"},
+                        { name: "Mewtwo", description: "4"},
                         { name: "Ninja turtle", description: "5"},
-                        { name: "Pikechu", description: "6"},
-                        { name: "Sonic hog", description: "7"},
-                        { name: "Tank", description: "8"},
-                        { name: "Salesman", description: "9"},
-                        { name: "Curby", description: "10"},
-                        { name: "Hulk", description: "11"}];
+                        { name: "Pikachu", description: "6"},
+                        { name: "Sonic", description: "7"},
+                        { name: "Abraham Lincoln", description: "8"},
+                        { name: "LDS Missionary", description: "9"},
+                        { name: "Bill Gates", description: "10"},
+                        { name: "Bruce Banner", description: "11"}];
 
         this.weaknessCards = [
                     {name:'can only breathe underwater', description:'1'},
