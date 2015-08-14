@@ -79,4 +79,11 @@ export default class Home{
         this.player2Weakness = [];
         this.player2Weakness.push(RepoList.getInstance().generateWeakness());
     }
+    
+    add() {
+        this.player1Abilities.push(RepoList.getInstance().generateAbility());
+        this.player1Weakness.push(RepoList.getInstance().generateWeakness());
+        this.player2Abilities.push(RepoList.getInstance().generateAbility());
+        this.player2Weakness.push(RepoList.getInstance().generateWeakness());
+    }
 }
