@@ -1,5 +1,5 @@
 //http://victorsavkin.com/post/119943127151/angular-2-template-syntax
-import {formDirectives, Component, View, bootstrap} from "angular2/angular2";
+import {NgFor, formDirectives, Component, View, bootstrap} from "angular2/angular2";
 
 import RepoList from "./repo-list";
 
@@ -7,23 +7,23 @@ import RepoList from "./repo-list";
     selector: "home"
 })
 @View({
-    directives: [formDirectives],
+    directives: [NgFor, formDirectives],
     //I could've just onButtonClick(name), but wanted to show #input syntax
     template:`
     <div>
         <h2>HERO</h2>
         <ul>
-          <li>~~hero goes here~~</li>
+          {{player1.name}}
         </ul>
 
         <h2>POWERS</h2>
         <ul>
-          <li>~~powers goes here~~</li>
+          <li *ng-for="#ability of player1Abilities">{{ability.name}}</li>
         </ul>
 
         <h2>WEAKNESS</h2>
         <ul>
-          <li>~~weakness goes here~~</li>
+          <li *ng-for="#weakness of player2Weakness">{{weakness.name}}</li>
         </ul>
 
       </div>
@@ -31,21 +31,22 @@ import RepoList from "./repo-list";
     <div>
         <h2>HERO</h2>
         <ul>
-          <li>~~hero goes here~~</li>
+          {{player2.name}}
         </ul>
 
         <h2>POWERS</h2>
         <ul>
-          <li>~~powers goes here~~</li>
+          <li *ng-for="#ability of player2Abilities">{{ability.name}}</li>
         </ul>
 
         <h2>WEAKNESS</h2>
         <ul>
-          <li>~~weakness goes here~~</li>
+          <li *ng-for="#weakness of player2Weakness">{{weakness.name}}</li>
         </ul>
 
       </div>
         <button (click)="generateCharacter()">generate character</button>
+        <button (click)="add()">add ability and weakness</button>
     `
 })
 export default class Home{
