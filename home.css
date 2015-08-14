@@ -1,0 +1,18 @@
+.hero-box{
+  background-color: #FF0000;
+  border: #C5BCBC 5px solid;
+  color: white;
+  width: 300px;
+  padding: 10px;
+}
+
+.hero-box h1{
+  text-align: center;
+  font-size: 50px;
+}
+
+.hero-box button{
+  margin: 0 auto;
+  display: inherit;
+  font-size: 20px;
+}

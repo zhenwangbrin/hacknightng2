@@ -10,7 +10,7 @@ import RepoList from "./repo-list";
     directives: [NgFor, formDirectives],
     //I could've just onButtonClick(name), but wanted to show #input syntax
     template:`
-    <div>
+    <div class="hero-box">
         <h2>HERO</h2>
         <ul>
           {{player1.name}}
@@ -28,7 +28,7 @@ import RepoList from "./repo-list";
 
       </div>
       
-    <div>
+    <div class="hero-box">
         <h2>HERO</h2>
         <ul>
           {{player2.name}}
