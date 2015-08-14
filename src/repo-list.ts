@@ -20,10 +20,19 @@ const REPOS = `https://api.github.com/users/angular/repos`;
 `
 })
 export default class RepoList {
-    repos:any[] = [];
+    static instance:RepoList;
     characterCards = [];
     abilityCards = [];
     players = [];
+
+    static getInstance() {
+        if (RepoList.instance == null) {
+            RepoList.instance = new RepoList();
+            RepoList.instance.init();
+        }
+ 
+        return RepoList.instance;
+    }
 
     init() {
         this.players = [{position:1, character:{}},{position:2, character:{}},{position:-1, character:{}},{position:-1, character:{}}];
