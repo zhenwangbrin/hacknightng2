@@ -23,6 +23,7 @@ export default class RepoList {
     static instance:RepoList;
     characterCards = [];
     abilityCards = [];
+    weaknessCards = [];
     players = [];
 
     static getInstance() {
@@ -134,5 +135,11 @@ export default class RepoList {
         var returnAbility = this.abilityCards[0];
         this.abilityCards = this.abilityCards.slice(1, this.abilityCards.length-1);
         return returnAbility;
+    }
+    
+    generateWeakness() {
+        var returnWeakness = this.weaknessCards[0];
+        this.weaknessCards = this.weaknessCards.slice(1, this.weaknessCards.length-1);
+        return returnWeakness;
     }
 }
