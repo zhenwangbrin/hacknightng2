@@ -51,28 +51,28 @@ export default class RepoList {
                         { name: "Hulk", description: "11"}];
 
         this.weaknessCards = [
-            {name:'can only breathe underwater', description:'1'},
-            {name:'super power only works while holding breath', description:'2'},
-            {name:'is really shy of the opposite sex', description:'3'},
-            {name:'weak against water', description:'4'},
-            {name:'has to go to the bathroom every 2 minuts', description:'5'},
-            {name:'allergic to gingers', description:'6'},
-            {name:'powerless against the color blue', description:'7'},
-            {name:'has no arms', description:'8'},
-            {name:'lactose intolerance', description:'9'},
-            {name:'is blind', description:'10'},
-            {name:'has severe ADHD', description:'11'},
-            {name:'100,000 dollars of student debt', description:'12'},
-            {name:'strictly follows the Word of Wisdom', description:'13'},
-            {name:'allergic to cats', description:'14'},
-            {name:'has no legs', description:'15'},
+                    {name:'can only breathe underwater', description:'1'},
+                    {name:'super power only works while holding breath', description:'2'},
+                    {name:'is really shy of the opposite sex', description:'3'},
+                    {name:'weak against water', description:'4'},
+                    {name:'has to go to the bathroom every 2 minuts', description:'5'},
+                    {name:'allergic to gingers', description:'6'},
+                    {name:'powerless against the color blue', description:'7'},
+                    {name:'has no arms', description:'8'},
+                    {name:'lactose intolerance', description:'9'},
+                    {name:'is blind', description:'10'},
+                    {name:'has severe ADHD', description:'11'},
+                    {name:'100,000 dollars of student debt', description:'12'},
+                    {name:'strictly follows the Word of Wisdom', description:'13'},
+                    {name:'allergic to cats', description:'14'},
+                    {name:'has no legs', description:'15'},
             {name:'cross-eyed', description:'16'},
             {name:'powers only work while singing', description:'17'},
             {name:'cant eat gluten', description:'18'},
             {name:'voted for Al Gore', description:'19'}
         ];
                         
-         this.abilityCards = [{ name: "Laser eyes", description: "1"},
+        this.abilityCards = [{ name: "Laser eyes", description: "1"},
                         { name: "Super Strength", description: "2"},
                         { name: "Mind control", description: "3"},
                         { name: "Breath fire", description: "4"},
@@ -133,13 +133,13 @@ export default class RepoList {
     }
     generateAbility() {
         var returnAbility = this.abilityCards[0];
-        this.abilityCards = this.abilityCards.slice(1, this.abilityCards.length-1);
+        this.abilityCards = this.abilityCards.slice(1, this.abilityCards.length);
         return returnAbility;
     }
     
     generateWeakness() {
         var returnWeakness = this.weaknessCards[0];
-        this.weaknessCards = this.weaknessCards.slice(1, this.weaknessCards.length-1);
+        this.weaknessCards = this.weaknessCards.slice(1, this.weaknessCards.length);
         return returnWeakness;
     }
 }
