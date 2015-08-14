@@ -128,7 +128,7 @@ export default class RepoList {
     }
     generateCharacter() {
         var returnChar = this.characterCards[0];
-        this.characterCards = this.characterCards.slice(1, this.characterCards.length-1);
+        this.characterCards = this.characterCards.slice(1, this.characterCards.length);
         return returnChar;
     }
     generateAbility() {

@@ -12,7 +12,7 @@ import RepoList from "./repo-list";
     template:`
         <div>Welcome to the <button (click)="onButtonClick(input.value)">{{name}}</button></div>
         <input #input [(ng-model)]="name">
-        <button (click)="alert(RepoList.getInstance().getCharacter().name)">generate character</button>
+        <button (click)="generateCharacter()">generate character</button>
     `
 })
 export default class Home{
@@ -25,5 +25,9 @@ export default class Home{
     constructor () {
         RepoList.getInstance();
         
+    }
+    
+    generateCharacter() {
+        alert(RepoList.getInstance().generateCharacter().name + " characterCount:" + RepoList.getInstance().characterCards.length);
     }
 }
